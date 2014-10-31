@@ -1,6 +1,5 @@
 TARGET = curI
 OBJS = curI.o
-#AA := $(wildcard *.aa)
 AA := $(wildcard aa/*.aa)
 AA_HEADER = aa.h
 DATS := $(addsuffix .dat, $(basename $(AA)))
