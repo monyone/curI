@@ -27,7 +27,7 @@ $(AA_HEADER): $(DATS)
 	echo "#define AA_SIZE `ls -1 aa | grep .dat | wc -l`" >> $(AA_HEADER)
 	echo "" >> $(AA_HEADER)
 	echo "const char const * aa_array[] = {" >> $(AA_HEADER)
-	echo '    '`ls -C aa/*.dat | sed "s/.dat//g" | sed "s/aa\///g" | tr [:lower:] [:upper:] | sed -e "s/[ ][ ]*/, /g"` >> $(AA_HEADER)
+	echo '    '`ls -C -m aa/*.dat | sed "s/.dat//g" | sed "s/aa\///g" | tr [:lower:] [:upper:]` >> $(AA_HEADER)
 	echo "};" >> $(AA_HEADER)
 	
 	
